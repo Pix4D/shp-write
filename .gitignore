@@ -1,1 +1,18 @@
+# compiled output
+/dist
+/tmp
+/reports
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+*.launch
+.settings/
+
 shpwrite.js
