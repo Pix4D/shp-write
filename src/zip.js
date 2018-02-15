@@ -29,11 +29,11 @@ module.exports = function(gj, options) {
     }
   });
 
-  var generateOptions = { compression: 'STORE' };
+  var generateOptions = { type: 'base64', compression: 'STORE' };
 
   if (!process.browser) {
     generateOptions.type = 'nodebuffer';
   }
 
-  return zip.generate(generateOptions);
+  return zip.generateAsync(generateOptions);
 };
