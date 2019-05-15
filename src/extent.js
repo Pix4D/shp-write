@@ -1,8 +1,30 @@
 module.exports.enlarge = function enlargeExtent(extent, pt) {
-  if (pt[0] < extent.xmin) extent.xmin = pt[0];
-  if (pt[0] > extent.xmax) extent.xmax = pt[0];
-  if (pt[1] < extent.ymin) extent.ymin = pt[1];
-  if (pt[1] > extent.ymax) extent.ymax = pt[1];
+  const x = pt[0];
+  if (x < extent.xmin) {
+    extent.xmin = x;
+  }
+  if (x > extent.xmax) {
+    extent.xmax = x;
+  }
+
+  const y = pt[1];
+  if (y < extent.ymin) {
+    extent.ymin = y;
+  }
+  if (y > extent.ymax) {
+    extent.ymax = y;
+  }
+
+  if (pt.length === 3) {
+    const z = pt[2];
+    if (z < extent.zmin) {
+      extent.zmin = pt[2];
+    }
+    if (z > extent.zmax) {
+      extent.zmax = pt[2];
+    }
+  }
+
   return extent;
 };
 
