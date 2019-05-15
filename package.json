@@ -12,10 +12,22 @@
     "type": "git",
     "url": "git://github.com/mapbox/shp-write.git"
   },
-  "files": ["index.js", "src", "shpwrite.js"],
-  "keywords": ["shapefile", "write", "js"],
+  "files": [
+    "index.js",
+    "src",
+    "shpwrite.js"
+  ],
+  "keywords": [
+    "shapefile",
+    "write",
+    "js"
+  ],
   "author": "Tom MacWright",
   "contributors": [
+    {
+      "name": "Hugo Campos",
+      "email": "hugo.campos@pix4d.com"
+    },
     {
       "name": "Nick Baugh",
       "email": "niftylettuce@gmail.com"
@@ -27,17 +39,11 @@
   },
   "dependencies": {
     "dbf": "0.1.4",
-    "jszip": "3.1.5"
+    "jszip": "3.2.1"
   },
   "devDependencies": {
-    "browserify": "^16.1.0",
-    "cz-conventional-changelog": "^2.1.0",
+    "browserify": "^16.2.3",
     "expect.js": "~0.3.1",
-    "mocha": "~2.4.5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "mocha": "~6.1.4"
   }
 }
