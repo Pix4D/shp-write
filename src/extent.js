@@ -19,6 +19,6 @@ module.exports.blank = function() {
     xmin: Number.MAX_VALUE,
     ymin: Number.MAX_VALUE,
     xmax: -Number.MAX_VALUE,
-    ymax: -Number.MAX_VALUE
+    ymax: -Number.MAX_VALUE,
   };
 };

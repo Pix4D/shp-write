@@ -2,21 +2,21 @@ var write = require('../src/write'),
   fs = require('fs');
 
 var points = [
-  [0, 0]
+  [0, 0],
   //[10, 10]
 ];
 
 write(
   // feature data
   [
-    { foo: 'bar' }
+    { foo: 'bar' },
     //,{no:'ha'}
   ],
   // geometry type
   'POINT',
   // geometries
   points,
-  finish
+  finish,
 );
 
 function finish(err, files) {

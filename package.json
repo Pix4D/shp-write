@@ -1,23 +1,21 @@
 {
-  "name": "shp-write",
+  "name": "@pix4d/shp-write",
   "version": "0.3.2",
   "description": "write shapefiles from pure javascript",
-  "main": "index.js",
+  "main": "build/shp-write.js",
+  "typings": "shp-write.d.ts",
   "scripts": {
-    "test": "mocha -R spec",
-    "prepublish": "npm run make",
-    "make": "browserify -s shpwrite ./ > shpwrite.js",
-    "prettier": "prettier --write \"**/*.js\" \"**/*.jsx\" \"**/*.tsx\" \"**/*.ts\""
+    "build": "npm run clean && webpack --mode production --progress --config webpack.config.prod.js",
+    "clean": "rimraf build",
+    "prepare-release": "standard-version",
+    "prettier": "prettier --write \"**/*.js\" \"**/*.jsx\" \"**/*.tsx\" \"**/*.ts\"",
+    "start": "webpack --mode development --watch --progress",
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/mapbox/shp-write.git"
   },
-  "files": [
-    "index.js",
-    "src",
-    "shpwrite.js"
-  ],
   "keywords": [
     "shapefile",
     "write",
@@ -43,9 +41,20 @@
     "jszip": "3.2.1"
   },
   "devDependencies": {
-    "browserify": "^16.2.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "@types/geojson": "7946.0.7",
+    "babel-loader": "^8.0.6",
+    "circular-dependency-plugin": "^5.0.2",
     "expect.js": "~0.3.1",
     "mocha": "~6.1.4",
-    "prettier": "1.17.1"
+    "prettier": "1.17.1",
+    "rimraf": "^2.6.3",
+    "size-plugin": "^1.2.0",
+    "standard-version": "6.0.1",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack": "^4.31.0"
   }
 }

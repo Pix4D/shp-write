@@ -24,7 +24,7 @@ module.exports = function(gj, options) {
           zip.file(fileName + '.shx', files.shx.buffer, { binary: true });
           zip.file(fileName + '.dbf', files.dbf.buffer, { binary: true });
           zip.file(fileName + '.prj', prj);
-        }
+        },
       );
     }
   });

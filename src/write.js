@@ -10,7 +10,7 @@ var types = require('./types'),
 var writers = {
   1: pointWriter,
   5: polyWriter,
-  3: polyWriter
+  3: polyWriter,
 };
 
 var recordHeaderLength = 8;
@@ -40,7 +40,7 @@ function write(rows, geometry_type, geometries, callback) {
     extent,
     new DataView(shpBuffer, 100),
     new DataView(shxBuffer, 100),
-    TYPE
+    TYPE,
   );
 
   shpView.setInt32(24, shpLength / 2);
@@ -52,7 +52,7 @@ function write(rows, geometry_type, geometries, callback) {
     shp: shpView,
     shx: shxView,
     dbf: dbfBuf,
-    prj: prj
+    prj: prj,
   });
 }
 

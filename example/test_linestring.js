@@ -10,7 +10,7 @@ write(
   'POLYLINE',
   // geometries
   points,
-  finish
+  finish,
 );
 
 function finish(err, files) {

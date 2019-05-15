@@ -26,7 +26,7 @@ function obj(_) {
   for (var n in fields) {
     o.push({
       name: n,
-      type: types[fields[n]]
+      type: types[fields[n]],
     });
   }
   return o;

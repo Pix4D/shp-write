@@ -10,7 +10,7 @@ write(
   'POLYGON',
   // geometries
   points,
-  finish
+  finish,
 );
 
 function finish(err, files) {

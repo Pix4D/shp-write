@@ -12,5 +12,5 @@ module.exports.geometries = {
   POLYLINEM: 23,
   POLYGONM: 25,
   MULTIPOINTM: 28,
-  MULTIPATCH: 31
+  MULTIPATCH: 31,
 };

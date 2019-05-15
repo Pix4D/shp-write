@@ -19,7 +19,7 @@ function justType(type, TYPE) {
     return {
       geometries: geometries,
       properties: oftype.map(justProps),
-      type: TYPE
+      type: TYPE,
     };
   };
 }

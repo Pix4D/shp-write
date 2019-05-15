@@ -14,7 +14,7 @@ write(
   'POINT',
   // geometries
   points,
-  finish
+  finish,
 );
 
 function finish(err, files) {

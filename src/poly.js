@@ -50,7 +50,7 @@ module.exports.write = function writePoints(geometries, extent, shpView, shxView
         onlyParts.reduce(function(a, b, idx) {
           return idx < p ? a + b.length : a;
         }, 0),
-        true
+        true,
       );
     }
 

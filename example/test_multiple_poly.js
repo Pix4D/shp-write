@@ -3,7 +3,7 @@ var write = require('../src/write'),
 
 var points = [
   [[-180.0, 10.0], [20.0, 90.0], [180.0, -5.0], [-30.0, -90.0]],
-  [[-180.0, 10.0], [20.0, 90.0], [180.0, -5.0], [-30.0, -90.0]]
+  [[-180.0, 10.0], [20.0, 90.0], [180.0, -5.0], [-30.0, -90.0]],
 ];
 
 write(
@@ -13,7 +13,7 @@ write(
   'POLYGON',
   // geometries
   points,
-  finish
+  finish,
 );
 
 function finish(err, files) {
